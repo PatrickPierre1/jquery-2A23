@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução Jquery</title>
+</head>
+<body>
+    <form action="">
+        <input required type="text" placeholder="Insira seu nome" name="nome" class="nome" id="">
+        <input type="text" placeholder="seuemail@gmail.com" name="email" class="email" id="">
+        <textarea name="mensagem" placeholder="Insira a mensagem" cols="30" rows="10" class="mensagem"></textarea>
+
+        <button onclick="pegarValor()">Enviar</button>
+    </form>
+ 
+    <hr>
+    <a href="#">Não clique aqui</a>
+
+
+
+    <!--Chamando biblioteca jquery-->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <!--Funcionalidade da página-->
+    <script type="text/javascript">
+        /*
+        function pegarValor() {
+            var valorform = $('.nome').val();
+            alert(valorform);
+        }
+        */
+
+        function pegarValor () {
+            var valorform = document.querySelector('.nome').value;
+            var valorformMail = document.querySelector('.email').value;
+            var valorformMensagem = document.querySelector('.mensagem').value;
+            
+            alert('Olá, ' + valorform + ' Seu email ' + valorformMail + ' Mensagem do usuário: ' + valorformMensagem);
+
+            alert('INSERT into nometabela(nome, email, mensagem)values('
+         + valorform + ',' + valorformMail + ',' + valorformMensagem + ')'
+         );
+        }
+        $(document).ready(function() {
+            $("a").click(function () {
+                alert("Voce perdeu");
+            })
+        })
+
+        
+
+    </script> 
+    
+</body>
+</html>

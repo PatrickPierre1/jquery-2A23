@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução Jquery</title>
+</head>
+<body>
+
+    <ul id="listaOrdenada">
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+    </ul>
+
+
+
+
+
+
+
+    <!--Chamando biblioteca jquery-->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <!--Funcionalidade da página-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#listaOrdenada").css("color", "red");
+        });
+    </script> 
+    
+</body>
+</html>
